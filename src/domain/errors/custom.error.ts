@@ -19,7 +19,7 @@ export class CustomError extends Error {
   static notFound(message: string, details?: any) {
     return new CustomError(404, message, details);
   }
-  static internalServer(message: string, details?: any) {
+  static internalServer(message: string = 'Internal server error', details?: any) {
     return new CustomError(500, message, details);
   }
 }
